@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: bnb_dev
+  database: db/bnb_dev
 
 test:
   <<: *default
-  database: bnb_test
+  database: db/bnb_test
 
 production:
   adapter: postgresql
