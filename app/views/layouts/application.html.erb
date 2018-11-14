@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Rubymine</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : 'Chitter' %>">
+  <%= csrf_meta_tags %>
 
-  <body>
-    <%= yield %>
-  </body>
+  <title><%= content_for?(:title) ? yield(:title) : 'Chitter' %></title>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+</head>
+
+<body>
+<%= render 'layouts/navigation' %>
+
+<div class="container">
+  <%= render 'layouts/messages' %>
+  <%= yield %>
+</div>
+</body>
 </html>

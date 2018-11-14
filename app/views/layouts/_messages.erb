@@ -1,0 +1,19 @@
+<% if Rails.env.development? %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    Running in development mode!
+  </div>
+<% end %>
+
+<% flash.each do |type, msg| %>
+  <%= content_tag :div, class: bootstrap_alert(type) do %>
+    <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+    <p><%= msg.to_s %></p>
+  <% end %>
+<% end %>
