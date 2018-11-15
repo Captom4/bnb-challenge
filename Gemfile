@@ -15,6 +15,7 @@ gem 'pg'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'simple_form'
+gem 'bootstrap_form'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -33,7 +34,6 @@ group :development do
   gem 'rails_layout'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'bootstrap_form'
 
 end
 
