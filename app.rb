@@ -1,4 +1,4 @@
-require 'sinatra/base'
+require 'Sinatra/base'
 
 class MakersBnB < Sinatra::Base
 
