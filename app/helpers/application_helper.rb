@@ -7,4 +7,8 @@ module ApplicationHelper
     when 'alert' then "alert-warning"
     end
   end
+
+  def is_user?(user)
+     user == current_user
+  end
 end
