@@ -3,11 +3,18 @@
 <head>
   <title>Home</title>
 </head>
-<body>
+<body bgcolor="#CACFD2">
   <button type="button" style="width:244px;font-size:40px;" onclick="window.location.href='./'">Home</button>
   <button type="button" style="width:244px;font-size:40px;" onclick="window.location.href='spaces'">Spaces</button>
   <button type="button" style="width:430px;font-size:40px;" onclick="window.location.href='list-a-space'">List a new space</button>
   <button type="button" style="width:244px;font-size:40px;" onclick="window.location.href='sign-in'">Sign in</button>
   <button type="button" style="width:244px;font-size:40px;" onclick="window.location.href='sign-up'">Sign up</button>
+  <h1 align="center" style="font-size:65;font-family:arial;">Sign up page</h1>
+  <form action="/sign-up">
+    <label for="first-name" style="font-size:25;font-family:arial;position:relative;top:30px;left:650;">First name</label>
+    <input type="text" id="first-name" style="position:relative;top:60;left:522;"/>
+    <label for="surname" style="font-size:25;font-family:arial;position:relative;top:100px;left:400;">Surname</label>
+    <input type="text" id="surname" style="position:relative;top:130;left:281;"/>
+  </form>
 </body>
 </html>
