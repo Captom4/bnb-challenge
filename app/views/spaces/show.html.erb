@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @space.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @space.description %>
+</p>
+
+<p>
+  <strong>Price per night:</strong>
+  <%= @space.price_per_night %>
+</p>
+
+<p>
+  <strong>Available from:</strong>
+  <%= @space.available_from %>
+</p>
+
+<p>
+  <strong>Available to:</strong>
+  <%= @space.available_to %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @space.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_space_path(@space) %> |
+<%= link_to 'Back', spaces_path %>
