@@ -1,0 +1,20 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/bnb_dev
+
+test:
+  <<: *default
+  database: db/bnb_test
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: bnb_production
+  username: bnb
+  password: <%= ENV['BNB_DATABASE_PASSWORD'] %>
