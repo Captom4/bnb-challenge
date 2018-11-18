@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_155138) do
     t.integer "space_id"
     t.date "booked_date"
     t.integer "user_id"
-    t.boolean "accepted", default: false
+    t.integer "state", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["space_id"], name: "index_requests_on_space_id"

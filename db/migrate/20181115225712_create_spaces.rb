@@ -7,7 +7,6 @@ class CreateSpaces < ActiveRecord::Migration[5.2]
       t.float :price_per_night
       t.date :available_from
       t.date :available_to
-
       t.timestamps
     end
   end
