@@ -17,7 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'simple_form'
 gem 'bootstrap_form'
 
-
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do

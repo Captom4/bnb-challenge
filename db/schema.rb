@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_225712) do
+ActiveRecord::Schema.define(version: 2018_11_18_155138) do
+
+  create_table "requests", force: :cascade do |t|
+    t.integer "space_id"
+    t.date "booked_date"
+    t.integer "user_id"
+    t.integer "state", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["space_id"], name: "index_requests_on_space_id"
+    t.index ["user_id"], name: "index_requests_on_user_id"
+  end
 
   create_table "spaces", force: :cascade do |t|
     t.integer "user_id"

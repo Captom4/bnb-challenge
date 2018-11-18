@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: db/bnb_dev
+  database: db/bnb_dev.sqlite3
 
 test:
   <<: *default
-  database: db/bnb_test
+  database: db/bnb_test.sqlite3
 
 production:
   adapter: postgresql

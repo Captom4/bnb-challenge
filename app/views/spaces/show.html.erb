@@ -29,6 +29,7 @@
   <strong>Owner:</strong>
   <%= @space.user.email %>
 </p>
-
-<%= link_to 'Edit', edit_space_path(@space) %> |
+<% if(is_owner?(@space.user)) %>
+  <%= link_to 'Edit', edit_space_path(@space) %> |
+<% end %>
 <%= link_to 'Back', spaces_path %>

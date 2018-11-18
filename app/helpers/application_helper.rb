@@ -8,7 +8,7 @@ module ApplicationHelper
     end
   end
 
-  def is_user?(user)
+  def is_owner?(user)
      user == current_user
   end
 end

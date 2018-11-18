@@ -1,0 +1,10 @@
+<div class="card text-white <%= convert_state(request.state) %> mb-3" style="max-width: 18rem;">
+  <div class="card-header">Requested for: <%= request.booked_date %></div>
+  <div class="card-body">
+    <h5 class="card-title"><%= request.space.name%></h5>
+    <p class="card-text"><%= request.space.description%></p>
+  </div>
+  <div class="card-footer">Date request made: <%= request.updated_at %></div>
+
+</div>
+
